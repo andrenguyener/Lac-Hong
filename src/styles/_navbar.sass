@@ -1,0 +1,238 @@
+/* Variables */
+
+// Adjust width accordingly (use even #'s)
+$logo-width: 118px
+// Reduce px value to increase space between logo and menu text
+$logo-padding: $logo-width - 32px 
+// Leave alone
+$logo-margin: - ($logo-width / 2)
+
+
+.menu
+    a
+        display: inline
+
+.nav-header
+    +breakpoint(small)
+        background-color: $dark-green
+    +breakpoint(med-large)
+        background-color: transparent
+
+header
+    .nav-header
+        +breakpoint(small)
+            background-color: transparent!important
+
+#nav-menu
+    a
+        color: white
+    .overline
+        a    
+            text-decoration-color: $yellow
+            //text-decoration-color: linear-gradient(to right, transparent, $yellow, transparent)
+        &:hover
+            text-decoration: overline
+    .selected
+        text-decoration: overline
+
+    .has-submenu
+        &:hover .submenu
+            //transform: translateY(0%)
+            //transition-delay: 0s 0s 0.3s
+            //visibility: visible
+            //opacity: 1
+            //transition: all 1s
+            //visibility: visible
+            opacity: 1
+            //z-index: 1
+            transform: translateY(0%)
+            transition-delay: 0s
+            transition-duration: .3s
+            transition-property: all ease-in-out
+
+    .submenu
+          //transition: all 0.3s ease-in-out
+          //visibility: hidden
+          opacity: 0
+          transform: translateY(-1em)
+          transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s
+
+    +breakpoint(medium)
+        // font-size: rem-calc(11)
+        padding-top: 50px
+    +breakpoint(large)
+        font-size: 100%
+        padding-top: $global-padding
+/* Small Navigation */
+.nav-header
+    padding-bottom: rem-calc(100)
+
+header
+    .nav-header
+        padding-bottom: 0 !important
+
+
+.logo-small 
+  float: right
+
+     
+  /* Medium-Up Navigation */
+@media only screen and (min-width: 40rem)
+  
+
+  // Right part
+  .top-bar-right 
+    width: 50%
+    padding-left: $logo-padding
+    z-index: 10
+    +breakpoint(large)
+        padding-left: $logo-padding + 20px
+    +breakpoint(xlarge)
+        padding-left: $logo-padding + 30px
+    
+    ul 
+      float: left
+    
+      li
+        +breakpoint(med-large)
+            margin-right: rem-calc(10)
+        +breakpoint(950px)
+            margin-right: rem-calc(40)
+        +breakpoint(large)
+            margin-right: rem-calc(50)
+        +breakpoint(xlarge)
+            margin-right: rem-calc(65)
+        ul
+            
+            li
+                padding-left: rem-calc(5)
+                padding-bottom: rem-calc(5)
+                &:hover, &:focus
+                    background-color: $light-green
+            .selected-sub
+                background-color: $light-green
+  
+  // Left part
+  .top-bar-left 
+    width:  50%
+    padding-right: $logo-padding
+    z-index: 10
+    +breakpoint(large)
+        padding-right: $logo-padding + 20px
+    +breakpoint(xlarge)
+        padding-right: $logo-padding + 30px
+
+    ul 
+      float: right
+
+      li
+        +breakpoint(med-large)
+            margin-right: rem-calc(10)
+        +breakpoint(950px)
+            margin-right: rem-calc(40)
+        +breakpoint(large)
+            margin-right: rem-calc(50)
+        +breakpoint(xlarge)
+            margin-right: rem-calc(65)
+        ul
+            
+            li
+                padding-left: rem-calc(5)
+                padding-bottom: rem-calc(5)
+                &:hover, &:focus
+                    background-color: $light-green
+            .selected-sub
+                background-color: $light-green
+  
+.top-bar-right 
+    li.has-submenu:last-child
+        margin-right: 0px !important
+
+.top-bar-left 
+    li.has-submenu:last-child
+        margin-right: 0px !important
+      
+    
+  
+
+
+header
+    #nav-menu
+        background-color: transparent
+        .dropdown
+            background-color: transparent
+
+/* MOBILE NAV MENU */
+
+.vertical li a
+    +breakpoint(small only)
+        font-size: 1.5rem
+        line-height: 1.5
+
+/* Position and sizing of burger button */
+.bm-burger-button 
+    position: absolute
+    width: 36px
+    height: 30px
+    right: 36px
+    top: 36px
+    +breakpoint(med-large)
+        display: none
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars 
+    background: #fefefe
+
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button 
+    height: 24px
+    width: 24px
+
+
+/* Color/shape of close button cross */
+.bm-cross 
+    background: #fefefe
+
+
+/* General sidebar styles */
+.bm-menu 
+    background: $dark-green
+    // padding: 2.5em 1.5em 0
+    font-size: 1.15em
+    padding-top: 3em
+
+
+/* Wrapper for item list */
+.bm-item-list 
+    color: #fefefe
+    // padding: 0.3em
+    > a, .Collapsible 
+        color: #fefefe
+        // margin-left: 10px
+        padding-left: 10px
+        padding-top: 10px
+        padding-bottom: 10px
+        text-decoration: none
+        cursor: pointer
+        border-top: 2px solid grey
+        border-bottom: 1px solid grey
+        &:first-child
+            border-top: 3px solid grey
+        &:last-child
+            border-bottom: 3px solid grey
+
+/* Styling of overlay */
+.bm-overlay 
+    background: rgba(0, 0, 0, 0.3)
+
+.Collapsible__contentInner
+    background-color: $light-green
+    a
+        color: #fefefe
+        text-decoration: none
+        padding-left: 15px
+
+
+
+

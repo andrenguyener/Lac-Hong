@@ -1,0 +1,70 @@
+.menu_pdf
+    +breakpoint(xlarge)
+        max-width: rem-calc(1200)
+    +breakpoint(xxlarge)
+        max-width: rem-calc(1600)
+    tbody
+        td
+            //padding-top: 10px
+
+.event_menu
+    width: 100%
+    +breakpoint(large)
+        width: 25%
+        align: left
+        // .event_menu
+        //     .Main_Panel1
+        //         max-height: 500px
+        //         +breakpoint(medium)
+        //             max-height: 1000px
+
+.event_frame
+    // width: 100%
+    // height: 1000px
+    padding-top: 10px
+    display: none
+    +breakpoint(large)
+        display: initial
+        width: 75%
+        // valign: top
+
+    #Truyen1
+        width: 100%
+        height: 100%
+        margin: 0 auto
+        +breakpoint(xxlarge)
+            height: 1000px
+            width: 100%
+
+#carouselFrame
+    // display: block
+    // border-top: 0
+
+.Main_Panel1
+    max-height: 500px
+    +breakpoint(large)
+        max-height: 800px
+    +breakpoint(xlarge)
+        max-height: 1000px
+    ul, ol
+        list-style: none
+        li
+            margin: 5px 0
+            span
+                text-decoration: underline
+                cursor: pointer
+                &:hover
+                    color: #858585
+
+    +breakpoint(large)
+        ul
+            li
+                margin: 15px 0
+
+.responsive-embed
+    +breakpoint(large)
+        padding-bottom: 100%
+
+.pictureCarousel
+    .slide
+        cursor: default

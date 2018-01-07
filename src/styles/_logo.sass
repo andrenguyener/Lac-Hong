@@ -1,0 +1,29 @@
+.logo-wrapper
+    position: relative
+    +breakpoint(small only - 1px)
+        max-width: 10rem
+        margin: auto auto
+        padding-top: 5rem
+    +breakpoint(medium)
+      
+        margin-top: rem-calc(-30)
+        transition: all .2s ease-in-out
+        &:hover, &:focus
+            transform: scale(1.1)
+        .logo
+            width: rem-calc(120)
+            height:  rem-calc(92)
+            position: absolute
+            left: 50%
+            right: 50%
+            top: rem-calc(-6)
+            margin-top: rem-calc(60)
+            margin-left: $logo-margin
+            +breakpoint(med-large)
+                margin-top: rem-calc(10)
+            +breakpoint(large)
+                width: $logo-width
+                margin-left: $logo-margin
+                margin-top: rem-calc(5)
+            +breakpoint(xlarge) 
+                margin-top: rem-calc(5)
