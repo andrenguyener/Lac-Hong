@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
+require.context('./../../contents/Resources', true);
 // import $ from 'jquery';
 // require('foundation-sites');
 
