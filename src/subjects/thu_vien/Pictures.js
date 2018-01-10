@@ -50,38 +50,39 @@ class Pictures extends React.Component {
         const {title} = event.target;
         
         let imageKeys;
-                let imageArray;
-                switch(title) {
-                    case "2016Tet":
-                        imageKeys = _2016Tet.keys();
-                        imageArray = imageKeys.map(key => _2016Tet(key));
-                        this.setState({ data: imageArray});
-                        break;
-                    case "2015TetSeattleCenter":
-                        imageKeys = _2015TetSeattleCenter.keys();
-                        imageArray = imageKeys.map(key => _2015TetSeattleCenter(key));
-                        this.setState({ data: imageArray});
-                        break;
-                    case "2015Tet":
-                        imageKeys = _2015Tet.keys();
-                        imageArray = imageKeys.map(key => _2015Tet(key));
-                        this.setState({ data: imageArray});
-                        break;
-                    case "2014Christmas":
-                        imageKeys = _2014Christmas.keys();
-                        imageArray = imageKeys.map(key => _2014Christmas(key));
-                        this.setState({ data: imageArray});
-                        break;
-                    case "2014Tet":
-                        break;
-                    case "2010Tet":
-                        imageKeys = _2010Tet.keys();
-                        imageArray = imageKeys.map(key => _2010Tet(key));
-                        this.setState({ data: imageArray});
-                        break;
-                    default:
-                        break;
-                }
+        let imageArray;
+        switch(title) {
+            case "2016Tet":
+                imageKeys = _2016Tet.keys();
+                imageArray = imageKeys.map(key => _2016Tet(key));
+                this.setState({ data: imageArray});
+                break;
+            case "2015TetSeattleCenter":
+                imageKeys = _2015TetSeattleCenter.keys();
+                imageArray = imageKeys.map(key => _2015TetSeattleCenter(key));
+                this.setState({ data: imageArray});
+                break;
+            case "2015Tet":
+                imageKeys = _2015Tet.keys();
+                imageArray = imageKeys.map(key => _2015Tet(key));
+                this.setState({ data: imageArray});
+                break;
+            case "2014Christmas":
+                imageKeys = _2014Christmas.keys();
+                imageArray = imageKeys.map(key => _2014Christmas(key));
+                this.setState({ data: imageArray});
+                break;
+            case "2014Tet":
+                break;
+            case "2010Tet":
+                imageKeys = _2010Tet.keys();
+                imageArray = imageKeys.map(key => _2010Tet(key));
+                this.setState({ data: imageArray});
+                break;
+            default:
+                break;
+        }
+        console.log(this.state.data);
     }
 
     render() {

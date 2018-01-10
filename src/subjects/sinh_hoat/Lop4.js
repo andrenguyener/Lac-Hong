@@ -1,7 +1,10 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-require.context('./../../contents/Resources', true);
+// const context = require.context("./../../contents/Classrooms/Lop4", true, /\.html$/);
+// const context = require('./../../contents/Classrooms/Lop4/Lop4.html');
+// const context = require.context('./../../contents/Classrooms/Lop4', true, /\.(pdf)?$/);
+// const context = require.context('./../../contents/Classrooms/Lop4', true, /.*/);
 // import $ from 'jquery';
 // require('foundation-sites');
 
@@ -26,6 +29,11 @@ class Lop4 extends React.Component {
         // $(document).foundation();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+        // var pdfObj = {};
+        // context.keys().forEach(function (key) {
+        //     pdfObj[key] = context(key);
+        // });
+        // console.log(pdfObj);
     }
 
     componentWillUnmount() {

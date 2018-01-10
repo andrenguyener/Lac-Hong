@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
+const context = require.context('./../../contents/Classrooms/Lop5', true, /\.(pdf?)$/);
+// const context = require.context('./../../contents/Classrooms/Lop5', true, /\.*?/);
 // import $ from 'jquery';
 // require('foundation-sites');
 
@@ -25,6 +27,11 @@ class Lop5 extends React.Component {
         // $(document).foundation();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+        var pdfObj = {};
+        context.keys().forEach(function (key) {
+            pdfObj[key] = context(key);
+        });
+        console.log(pdfObj);
     }
 
     componentWillUnmount() {

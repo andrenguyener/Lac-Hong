@@ -15,7 +15,7 @@ class Resources extends React.Component {
             page: "Resources",
             width: "0",
             height: "0",
-            selectValue: "/contents/Classrooms/Lop5/Lop5.html"
+            selectValue: ""
         }
         this.onClick = this.getReceipt.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -39,9 +39,9 @@ class Resources extends React.Component {
         const {title} = event.target;
         if(this.mediaFrame) {
             if(this.state.width >= 1024) {
-                this.setState({selectValue: "/contents/" + this.state.page + "/" + title})
+                this.setState({selectValue: "./../contents/" + this.state.page + "/" + title})
             } else {
-                var win = window.open("/contents/" + this.state.page + "/" + title, '_blank');
+                var win = window.open("./../contents/" + this.state.page + "/" + title, '_blank');
                 win.focus();
             }
             

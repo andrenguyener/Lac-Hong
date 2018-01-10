@@ -21,7 +21,7 @@ import Stories from './subjects/thu_vien/Stories';
 import Videos from './subjects/thu_vien/Videos';
 import Contact from './subjects/lien_lac/Contact';
 import Links from './subjects/lien_ket/Links';
-import './styles/app.css';
+import './app.css';
 // import './js/app.js';
 //import jQuery from './js/jquery.js';
 // import jQuery from 'jquery';
