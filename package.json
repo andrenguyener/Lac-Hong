@@ -2,9 +2,11 @@
   "name": "lac-hong",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://andrenguyener.github.io/Lac-Hong/",
   "devDependencies": {
-    "react-scripts": "1.0.17",
-    "npm-run-all": "^4.0.2"
+    "gh-pages": "^1.1.0",
+    "npm-run-all": "^4.0.2",
+    "react-scripts": "1.0.17"
   },
   "dependencies": {
     "foundation-sites": "^6.4.4-rc1",
@@ -24,6 +26,8 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
