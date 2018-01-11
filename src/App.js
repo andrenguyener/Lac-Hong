@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom'
 
 import Home from './Home';
 import Historys from './subjects/gioi_thieu/History';
@@ -38,7 +38,7 @@ class App extends Component {
     return (
 
       <div className="App">
-        <Router>
+        <HashRouter>
             <div className="off-canvas-wrapper">
               <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
                 <Route exact path="/" component={Home} />
@@ -67,7 +67,7 @@ class App extends Component {
                 <Route path="/draw" component={Draw} /> */}
               </div>
             </div>
-        </Router>
+        </HashRouter>
       </div>
 
     );

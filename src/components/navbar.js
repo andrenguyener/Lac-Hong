@@ -140,7 +140,7 @@ class Navbar extends React.Component {
                     </div>*/}
                     <div className="logo-wrapper hide-for-med-large">
                         <div className="logo">
-                            <Link to="/"><img alt="logo" src="/img/logo.png"/></Link>
+                            <Link to="/"><img alt="logo" src="./img/logo.png"/></Link>
                         </div>
                     </div> 
                     
@@ -200,7 +200,7 @@ class Navbar extends React.Component {
                         </div>
                         <div className="logo-wrapper hide-for-small-only">
                             <div className="logo">
-                                <Link to="/"><img alt="logo" src="/img/logo.png"/></Link>
+                                <Link to="/"><img alt="logo" src="./img/logo.png"/></Link>
                             </div>
                         </div>
                         <div className="top-bar-right">
