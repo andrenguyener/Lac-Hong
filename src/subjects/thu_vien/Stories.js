@@ -3,7 +3,8 @@ import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
 // import $ from 'jquery';
 // require('foundation-sites');
-
+const context = require.context('./../../contents/Stories', true, /\.(pdf)?$/);
+var pdfObj = {};
 
 
 
@@ -15,7 +16,7 @@ class Stories extends React.Component {
             page: "Stories",
             width: "0",
             height: "0",
-            selectValue: "/contents/Stories/Sự Tích Trầu Cau.htm"
+            selectValue: ""
         }
         this.onClick = this.getReceipt.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -25,6 +26,10 @@ class Stories extends React.Component {
         // $(document).foundation();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+        context.keys().forEach(function (key) {
+            pdfObj[key] = context(key);
+        });
+        this.setState({selectValue: pdfObj["./Sự Tích Trầu Cau.pdf"]});
     }
 
     componentWillUnmount() {
@@ -39,12 +44,11 @@ class Stories extends React.Component {
         const {title} = event.target;
         if(this.mediaFrame) {
             if(this.state.width >= 1024) {
-                this.setState({selectValue: "/contents/" + this.state.page + "/" + title})
+                this.setState({selectValue: pdfObj[title]});
             } else {
-                var win = window.open("/contents/" + this.state.page + "/" + title, '_blank');
+                var win = window.open(pdfObj[title], '_blank');
                 win.focus();
             }
-            
         }
     }
 
@@ -60,52 +64,52 @@ class Stories extends React.Component {
                                     <div className="Main_Panel1" style={{overflow: "auto"}}>
                                         <ul>
                                             <li>
-                                                <span title='An Nam Chí Lược.pdf' onClick={this.onClick}>An Nam Chí Lược</span>
+                                                <span title='./An Nam Chí Lược.pdf' onClick={this.onClick}>An Nam Chí Lược</span>
                                             </li>
                                             <li>
-                                                <span title='Khâm Định Việt Sử Thông Giám Cương Mục.pdf' onClick={this.onClick}>Khâm Định Việt Sử Thông Giám Cương Mục</span>
+                                                <span title='./Khâm Định Việt Sử Thông Giám Cương Mục.pdf' onClick={this.onClick}>Khâm Định Việt Sử Thông Giám Cương Mục</span>
                                             </li>
                                             <li>
-                                                <span title='Lam Sơn Thực Lục.pdf' onClick={this.onClick}>Lam Sơn Thực Lục</span>
+                                                <span title='./Lam Sơn Thực Lục.pdf' onClick={this.onClick}>Lam Sơn Thực Lục</span>
                                             </li>
                                             <li>
-                                                <span title='Lịch Sử Việt Nam 01.htm' onClick={this.onClick}>Lịch Sử Việt Nam 01</span>
+                                                <span title='./Lịch Sử Việt Nam 01.pdf' onClick={this.onClick}>Lịch Sử Việt Nam 01</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Triều Chánh Biên Toát Yếu.pdf' onClick={this.onClick}>Quốc Triều Chánh Biên Toát Yếu</span>
+                                                <span title='./Quốc Triều Chánh Biên Toát Yếu.pdf' onClick={this.onClick}>Quốc Triều Chánh Biên Toát Yếu</span>
                                             </li>
                                             <li>
-                                                <span title='Sự Tích Quả Dưa Hấu.htm' onClick={this.onClick}>Sự Tích Quả Dưa Hấu</span>
+                                                <span title='./Sự Tích Quả Dưa Hấu.pdf' onClick={this.onClick}>Sự Tích Quả Dưa Hấu</span>
                                             </li>
                                             <li>
-                                                <span title='Sự Tích Trầu Cau.htm' onClick={this.onClick}>Sự Tích Trầu Cau</span>
+                                                <span title='./Sự Tích Trầu Cau.pdf' onClick={this.onClick}>Sự Tích Trầu Cau</span>
                                             </li>
                                             <li>
-                                                <span title='Thạch Sanh Lý Thông.htm' onClick={this.onClick}>An Nam Chí Lược</span>
+                                                <span title='./Thạch Sanh Lý Thông.pdf' onClick={this.onClick}>An Nam Chí Lược</span>
                                             </li>
                                             <li>
-                                                <span title='Truyện Kiều.pdf' onClick={this.onClick}>Truyện Kiều</span>
+                                                <span title='./Truyện Kiều.pdf' onClick={this.onClick}>Truyện Kiều</span>
                                             </li>
                                             <li>
-                                                <span title='Trăm Trứng Trăm Con.htm' onClick={this.onClick}>Trăm Trứng Trăm Con</span>
+                                                <span title='./Trăm Trứng Trăm Con.pdf' onClick={this.onClick}>Trăm Trứng Trăm Con</span>
                                             </li>
                                             <li>
-                                                <span title='Việt Nam Sử Lược.pdf' onClick={this.onClick}>Việt Nam Sử Lược</span>
+                                                <span title='./Việt Nam Sử Lược.pdf' onClick={this.onClick}>Việt Nam Sử Lược</span>
                                             </li>
                                             <li>
-                                                <span title='Việt Sử Tiêu Án.pdf' onClick={this.onClick}>Việt Sử Tiêu Án</span>
+                                                <span title='./Việt Sử Tiêu Án.pdf' onClick={this.onClick}>Việt Sử Tiêu Án</span>
                                             </li>
                                             <li>
-                                                <span title='Việt Sử Toàn Thư.pdf' onClick={this.onClick}>Việt Sử Toàn Thư</span>
+                                                <span title='./Việt Sử Toàn Thư.pdf' onClick={this.onClick}>Việt Sử Toàn Thư</span>
                                             </li>
                                             <li>
-                                                <span title='Đại Việt Sử Ký Toàn Thư.pdf' onClick={this.onClick}>Đại Việt Sử Ký Toàn Thư</span>
+                                                <span title='./Đại Việt Sử Ký Toàn Thư.pdf' onClick={this.onClick}>Đại Việt Sử Ký Toàn Thư</span>
                                             </li>
                                             <li>
-                                                <span title='Đại Việt Sử Lược.pdf' onClick={this.onClick}>Đại Việt Sử Lược</span>
+                                                <span title='./Đại Việt Sử Lược.pdf' onClick={this.onClick}>Đại Việt Sử Lược</span>
                                             </li>
                                             <li>
-                                                <span title='Đại Việt Thông Sử.pdf' onClick={this.onClick}>Đại Việt Thông Sử</span>
+                                                <span title='./Đại Việt Thông Sử.pdf' onClick={this.onClick}>Đại Việt Thông Sử</span>
                                             </li>
                                         </ul>
                                     </div>

@@ -3,7 +3,8 @@ import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
 // import $ from 'jquery';
 // require('foundation-sites');
-
+const context = require.context('./../../contents/Resources', true, /\.(pdf|docx|doc)?$/);
+var pdfObj = {};
 
 
 
@@ -25,6 +26,10 @@ class Resources extends React.Component {
         // $(document).foundation();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+        context.keys().forEach(function (key) {
+            pdfObj[key] = context(key);
+        });
+        this.setState({selectValue: pdfObj["./A_Sách giáo khoa cấp 01.pdf"]});
     }
 
     componentWillUnmount() {
@@ -39,12 +44,11 @@ class Resources extends React.Component {
         const {title} = event.target;
         if(this.mediaFrame) {
             if(this.state.width >= 1024) {
-                this.setState({selectValue: "./../contents/" + this.state.page + "/" + title})
+                this.setState({selectValue: pdfObj[title]});
             } else {
-                var win = window.open("./../contents/" + this.state.page + "/" + title, '_blank');
+                var win = window.open(pdfObj[title], '_blank');
                 win.focus();
             }
-            
         }
     }
 
@@ -60,139 +64,139 @@ class Resources extends React.Component {
                                     <div className="Main_Panel1" style={{overflow: "auto"}}>
                                         <ul>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 01.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 01</span>
+                                                <span title='./A_Sách giáo khoa cấp 01.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 01</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 02.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 02</span>
+                                                <span title='./A_Sách giáo khoa cấp 02.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 02</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 03.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 03</span>
+                                                <span title='./A_Sách giáo khoa cấp 03.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 03</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 04.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 04</span>
+                                                <span title='./A_Sách giáo khoa cấp 04.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 04</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 05.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 05</span>
+                                                <span title='./A_Sách giáo khoa cấp 05.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 05</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 06.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 06</span>
+                                                <span title='./A_Sách giáo khoa cấp 06.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 06</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 07.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 07</span>
+                                                <span title='./A_Sách giáo khoa cấp 07.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 07</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 08.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 08</span>
+                                                <span title='./A_Sách giáo khoa cấp 08.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 08</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 09.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 09</span>
+                                                <span title='./A_Sách giáo khoa cấp 09.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 09</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 10.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 10</span>
+                                                <span title='./A_Sách giáo khoa cấp 10.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 10</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 11.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 11</span>
+                                                <span title='./A_Sách giáo khoa cấp 11.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 11</span>
                                             </li>
                                             <li>
-                                                <span title='A_Sách giáo khoa cấp 12.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 12</span>
+                                                <span title='./A_Sách giáo khoa cấp 12.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 12</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 01.pdf' onClick={this.onClick}>Em học vần tiếng Việt 01</span>
+                                                <span title='./Em học vần tiếng Việt 01.pdf' onClick={this.onClick}>Em học vần tiếng Việt 01</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 02.pdf' onClick={this.onClick}>Em học vần tiếng Việt 02</span>
+                                                <span title='./Em học vần tiếng Việt 02.pdf' onClick={this.onClick}>Em học vần tiếng Việt 02</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 03.pdf' onClick={this.onClick}>Em học vần tiếng Việt 03</span>
+                                                <span title='./Em học vần tiếng Việt 03.pdf' onClick={this.onClick}>Em học vần tiếng Việt 03</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 04.pdf' onClick={this.onClick}>Em học vần tiếng Việt 04</span>
+                                                <span title='./Em học vần tiếng Việt 04.pdf' onClick={this.onClick}>Em học vần tiếng Việt 04</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 05.pdf' onClick={this.onClick}>Em học vần tiếng Việt 05</span>
+                                                <span title='./Em học vần tiếng Việt 05.pdf' onClick={this.onClick}>Em học vần tiếng Việt 05</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 06.pdf' onClick={this.onClick}>Em học vần tiếng Việt 06</span>
+                                                <span title='./Em học vần tiếng Việt 06.pdf' onClick={this.onClick}>Em học vần tiếng Việt 06</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 07.pdf' onClick={this.onClick}>Em học vần tiếng Việt 07</span>
+                                                <span title='./Em học vần tiếng Việt 07.pdf' onClick={this.onClick}>Em học vần tiếng Việt 07</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 08.pdf' onClick={this.onClick}>Em học vần tiếng Việt 08</span>
+                                                <span title='./Em học vần tiếng Việt 08.pdf' onClick={this.onClick}>Em học vần tiếng Việt 08</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 09.pdf' onClick={this.onClick}>Em học vần tiếng Việt 09</span>
+                                                <span title='./Em học vần tiếng Việt 09.pdf' onClick={this.onClick}>Em học vần tiếng Việt 09</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 10.pdf' onClick={this.onClick}>Em học vần tiếng Việt 10</span>
+                                                <span title='./Em học vần tiếng Việt 10.pdf' onClick={this.onClick}>Em học vần tiếng Việt 10</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 11.pdf' onClick={this.onClick}>Em học vần tiếng Việt 11</span>
+                                                <span title='./Em học vần tiếng Việt 11.pdf' onClick={this.onClick}>Em học vần tiếng Việt 11</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 12.pdf' onClick={this.onClick}>Em học vần tiếng Việt 12</span>
+                                                <span title='./Em học vần tiếng Việt 12.pdf' onClick={this.onClick}>Em học vần tiếng Việt 12</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 13.pdf' onClick={this.onClick}>Em học vần tiếng Việt 13</span>
+                                                <span title='./Em học vần tiếng Việt 13.pdf' onClick={this.onClick}>Em học vần tiếng Việt 13</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 14.pdf' onClick={this.onClick}>Em học vần tiếng Việt 14</span>
+                                                <span title='./Em học vần tiếng Việt 14.pdf' onClick={this.onClick}>Em học vần tiếng Việt 14</span>
                                             </li>
                                             <li>
-                                                <span title='Em học vần tiếng Việt 15.pdf' onClick={this.onClick}>Em học vần tiếng Việt 15</span>
+                                                <span title='./Em học vần tiếng Việt 15.pdf' onClick={this.onClick}>Em học vần tiếng Việt 15</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 01.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 01</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 01.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 01</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 02.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 02</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 02.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 02</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 03.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 03</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 03.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 03</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 04.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 04</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 04.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 04</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 05.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 05</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 05.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 05</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 06.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 06</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 06.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 06</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 07.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 07</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 07.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 07</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 08.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 08</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 08.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 08</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 09.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 09</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 09.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 09</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 10.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 10</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 10.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 10</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 11.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 11</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 11.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 11</span>
                                             </li>
                                             <li>
-                                                <span title='Quốc Văn Giáo Khoa Thư lớp Dự Bị 12.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 12</span>
+                                                <span title='./Quốc Văn Giáo Khoa Thư lớp Dự Bị 12.pdf' onClick={this.onClick}>Quốc Văn Giáo Khoa Thư lớp Dự Bị 12</span>
                                             </li>
                                             <li>
-                                                <span title='Sách giáo khoa 00 (mẫu giáo) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 00 (mẫu giáo) - Trần Văn Minh và Đinh Ngọc Thu</span>
+                                                <span title='./Sách giáo khoa 00 (mẫu giáo) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 00 (mẫu giáo) - Trần Văn Minh và Đinh Ngọc Thu</span>
                                             </li>
                                             <li>
-                                                <span title='Sách giáo khoa 01 (lớp 1) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 01 (lớp 1) - Trần Văn Minh và Đinh Ngọc Thu</span>
+                                                <span title='./Sách giáo khoa 01 (lớp 1) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 01 (lớp 1) - Trần Văn Minh và Đinh Ngọc Thu</span>
                                             </li>
                                             <li>
-                                                <span title='Sách giáo khoa 02 (lớp 2) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 02 (lớp 2) - Trần Văn Minh và Đinh Ngọc Thu</span>
+                                                <span title='./Sách giáo khoa 02 (lớp 2) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 02 (lớp 2) - Trần Văn Minh và Đinh Ngọc Thu</span>
                                             </li>
                                             <li>
-                                                <span title='Sách giáo khoa 03 (lớp 3) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 03 (lớp 3) - Trần Văn Minh và Đinh Ngọc Thu</span>
+                                                <span title='./Sách giáo khoa 03 (lớp 3) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 03 (lớp 3) - Trần Văn Minh và Đinh Ngọc Thu</span>
                                             </li>
                                             <li>
-                                                <span title='Sách giáo khoa 04 (lớp 4) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 04 (lớp 4) - Trần Văn Minh và Đinh Ngọc Thu</span>
+                                                <span title='./Sách giáo khoa 04 (lớp 4) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 04 (lớp 4) - Trần Văn Minh và Đinh Ngọc Thu</span>
                                             </li>
                                             <li>
-                                                <span title='Sách giáo khoa 05 (lớp 5) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 05 (lớp 5) - Trần Văn Minh và Đinh Ngọc Thu</span>
+                                                <span title='./Sách giáo khoa 05 (lớp 5) - Trần Văn Minh và Đinh Ngọc Thu.pdf' onClick={this.onClick}>Sách giáo khoa 05 (lớp 5) - Trần Văn Minh và Đinh Ngọc Thu</span>
                                             </li>
                                         </ul>
                                     </div>

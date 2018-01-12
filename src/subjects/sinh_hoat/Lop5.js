@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// const context = require.context('./../../contents/Classrooms/Lop5', true, /\.(pdf?)$/);
-// const context = require.context('./../../contents/Classrooms/Lop5', true, /\.*?/);
+const context = require.context('./../../contents/Classrooms/Lop5', true, /\.(pdf)?$/);
+var pdfObj = {};
 // import $ from 'jquery';
 // require('foundation-sites');
 
@@ -17,7 +17,7 @@ class Lop5 extends React.Component {
             page: "Classrooms/Lop5",
             width: "0",
             height: "0",
-            selectValue: "/contents/Classrooms/Lop5/Lop5.html"
+            selectValue: ""
         }
         this.onClick = this.getReceipt.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -27,11 +27,10 @@ class Lop5 extends React.Component {
         // $(document).foundation();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
-        // var pdfObj = {};
-        // context.keys().forEach(function (key) {
-        //     pdfObj[key] = context(key);
-        // });
-        // console.log(pdfObj);
+        context.keys().forEach(function (key) {
+            pdfObj[key] = context(key);
+        });
+        this.setState({selectValue: pdfObj["./Lop5.pdf"]});
     }
 
     componentWillUnmount() {
@@ -46,12 +45,11 @@ class Lop5 extends React.Component {
         const {title} = event.target;
         if(this.mediaFrame) {
             if(this.state.width >= 1024) {
-                this.setState({selectValue: "/contents/" + this.state.page + "/" + title})
+                this.setState({selectValue: pdfObj[title]});
             } else {
-                var win = window.open("/contents/" + this.state.page + "/" + title, '_blank');
+                var win = window.open(pdfObj[title], '_blank');
                 win.focus();
             }
-            
         }
     }
 
@@ -67,10 +65,13 @@ class Lop5 extends React.Component {
                                     <div className="Main_Panel1" style={{overflow: "auto"}}>
                                         <ul>
                                             <li>
-                                                <span title='Bà Tôi.pdf' onClick={this.onClick}>Bà Tôi</span>
+                                                <span title='./Lop5.pdf' onClick={this.onClick}>Lop 5</span>
                                             </li>
                                             <li>
-                                                <span title='Chị Em Tôi.htm' onClick={this.onClick}>Chị Em Tôi</span>
+                                                <span title='./Bà Tôi.pdf' onClick={this.onClick}>Bà Tôi</span>
+                                            </li>
+                                            <li>
+                                                <span title='./Chị Em Tôi.pdf' onClick={this.onClick}>Chị Em Tôi</span>
                                             </li>
                                         </ul>
                                     </div>

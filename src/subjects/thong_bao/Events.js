@@ -3,7 +3,8 @@ import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
 // import $ from 'jquery';
 // require('foundation-sites');
-
+const context = require.context('./../../contents/Events', true, /\.(pdf|docx|doc)?$/);
+var pdfObj = {};
 
 
 
@@ -25,6 +26,10 @@ class Events extends React.Component {
         // $(document).foundation();
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
+        context.keys().forEach(function (key) {
+            pdfObj[key] = context(key);
+        });
+        
     }
 
     componentWillUnmount() {
@@ -39,12 +44,11 @@ class Events extends React.Component {
         const {title} = event.target;
         if(this.mediaFrame) {
             if(this.state.width >= 1024) {
-                this.setState({selectValue: "/contents/" + this.state.page + "/" + title})
+                this.setState({selectValue: pdfObj[title]});
             } else {
-                var win = window.open("/contents/" + this.state.page + "/" + title, '_blank');
+                var win = window.open(pdfObj[title], '_blank');
                 win.focus();
             }
-            
         }
     }
 
@@ -60,55 +64,55 @@ class Events extends React.Component {
                                     <div className="Main_Panel1" style={{overflow: "auto"}}>
                                         <ul>
                                             <li>
-                                                <span title='2014_Thư Mời Lễ Tốt Nghiệp.pdf' onClick={this.onClick}>2014_Thư Mời Lễ Tốt Nghiệp</span>
+                                                <span title='./2014_Thư Mời Lễ Tốt Nghiệp.pdf' onClick={this.onClick}>2014_Thư Mời Lễ Tốt Nghiệp</span>
                                             </li>
                                             <li>
-                                                <span title='2015_Picnic.pdf' onClick={this.onClick}>2015_Picnic</span>
+                                                <span title='./2015_Picnic.pdf' onClick={this.onClick}>2015_Picnic</span>
                                             </li>
                                             <li>
-                                                <span title='2015_Thư Mời Lễ Tốt Nghiệp.pdf' onClick={this.onClick}>2015_Thư Mời Lễ Tốt Nghiệp</span>
+                                                <span title='./2015_Thư Mời Lễ Tốt Nghiệp.pdf' onClick={this.onClick}>2015_Thư Mời Lễ Tốt Nghiệp</span>
                                             </li>
                                             <li>
-                                                <span title='Fundraiser2015.pdf' onClick={this.onClick}>Fundraiser2015</span>
+                                                <span title='./Fundraiser2015.pdf' onClick={this.onClick}>Fundraiser2015</span>
                                             </li>
                                             <li>
-                                                <span title='Fundraiser_2017_Poster_Tea Palace.pdf' onClick={this.onClick}>Fundraiser_2017_Poster_Tea Palace</span>
+                                                <span title='./Fundraiser_2017_Poster_Tea Palace.pdf' onClick={this.onClick}>Fundraiser_2017_Poster_Tea Palace</span>
                                             </li>
                                             <li>
-                                                <span title='Giấy Đồng Ý.htm' onClick={this.onClick}>Giấy Đồng Ý</span>
+                                                <span title='./Giấy Đồng Ý.pdf' onClick={this.onClick}>Giấy Đồng Ý</span>
                                             </li>
                                             <li>
-                                                <span title='Gây Quỹ Poster 2014.pdf' onClick={this.onClick}>Gây Quỹ Poster 2014</span>
+                                                <span title='./Gây Quỹ Poster 2014.pdf' onClick={this.onClick}>Gây Quỹ Poster 2014</span>
                                             </li>
                                             <li>
-                                                <span title='Gây Quỹ Poster 2015.pdf' onClick={this.onClick}>Gây Quỹ Poster 2015</span>
+                                                <span title='./Gây Quỹ Poster 2015.pdf' onClick={this.onClick}>Gây Quỹ Poster 2015</span>
                                             </li>
                                             <li>
-                                                <span title='picnic 2017 TVNLH.docx' onClick={this.onClick}>picnic 2017 TVNLH</span>
+                                                <span title='./picnic 2017 TVNLH.docx' onClick={this.onClick}>picnic 2017 TVNLH</span>
                                             </li>
                                             <li>
-                                                <span title='Schedule.pdf' onClick={this.onClick}>Schedule</span>
+                                                <span title='./Schedule.pdf' onClick={this.onClick}>Schedule</span>
                                             </li>
                                             <li>
-                                                <span title='Thư cảm tạ 2015.pdf' onClick={this.onClick}>Thư cảm tạ 2015</span>
+                                                <span title='./Thư cảm tạ 2015.pdf' onClick={this.onClick}>Thư cảm tạ 2015</span>
+                                            </li>
+                                            {/* <li>
+                                                <span title='./Thư cảm tạ 2014.pdf' onClick={this.onClick}>Thư cảm tạ 2014</span>
+                                            </li> */}
+                                            <li>
+                                                <span title='./Thư Cảm Tạ 2012.pdf' onClick={this.onClick}>Thư Cảm Tạ 2012</span>
                                             </li>
                                             <li>
-                                                <span title='Thư cảm tạ 2014.pdf' onClick={this.onClick}>Thư cảm tạ 2014</span>
+                                                <span title='./Thư Mời Tết 2016.pdf' onClick={this.onClick}>Thư Mời Tết 2016</span>
                                             </li>
                                             <li>
-                                                <span title='Thư Cảm Tạ 2012.htm' onClick={this.onClick}>Thư Cảm Tạ 2012</span>
+                                                <span title='./Thư Mời Tết Nguyên Đán-2017.pdf' onClick={this.onClick}>Thư Mời Tết Nguyên Đán-2017</span>
                                             </li>
                                             <li>
-                                                <span title='Thư Mời Tết 2016.pdf' onClick={this.onClick}>Thư Mời Tết 2016</span>
+                                                <span title='./Thư Mời Văn Nghệ 2016 tháng 4.pdf' onClick={this.onClick}>Thư Mời Văn Nghệ 2016 tháng 4</span>
                                             </li>
                                             <li>
-                                                <span title='Thư Mời Tết Nguyên Đán-2017.pdf' onClick={this.onClick}>Thư Mời Tết Nguyên Đán-2017</span>
-                                            </li>
-                                            <li>
-                                                <span title='Thư Mời Văn Nghệ 2016 tháng 4.pdf' onClick={this.onClick}>Thư Mời Văn Nghệ 2016 tháng 4</span>
-                                            </li>
-                                            <li>
-                                                <span title='Đơn Ghi Danh 2015-2016.pdf' onClick={this.onClick}>Đơn Ghi Danh 2015-2016</span>
+                                                <span title='./Đơn Ghi Danh 2015-2016.pdf' onClick={this.onClick}>Đơn Ghi Danh 2015-2016</span>
                                             </li>
                                         </ul>
                                     </div>
