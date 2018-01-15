@@ -4,7 +4,7 @@ import Footer from './../../components/footer';
 // const context = require.context("./../../contents/Classrooms/Lop4", true, /\.html$/);
 // const context = require('./../../contents/Classrooms/Lop4/Lop4.html');
 const context = require.context('./../../contents/Classrooms/Lop4', true, /\.(pdf)?$/);
-var pdfObj = {};
+let pdfObj = {};
 // const context = require.context('./../../contents/Classrooms/Lop4', true, /.*/);
 // import $ from 'jquery';
 // require('foundation-sites');
@@ -34,6 +34,8 @@ class Lop4 extends React.Component {
             pdfObj[key] = context(key);
         });
         this.setState({selectValue: pdfObj["./Lop4.pdf"]});
+        console.log(this.state.selectValue);
+        console.log(pdfObj);
     }
 
     componentWillUnmount() {
@@ -54,6 +56,7 @@ class Lop4 extends React.Component {
                 win.focus();
             }
         }
+        console.log(this.state.selectValue);
     }
 
     render() {
