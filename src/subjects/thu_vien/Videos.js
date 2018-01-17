@@ -19,7 +19,7 @@ class Videos extends React.Component {
             <div id="videoSection"> 
                 <Navbar></Navbar>
                 <div className="page menu_pdf">
-                    <div className="grid-x grid-margin-x footer">
+                    <div className="grid-x grid-margin-x">
                         <div className="cell small-12 med-large-4">
                             <div className="videoOptions">
                                 <h5>Sinh Hoạt: </h5>

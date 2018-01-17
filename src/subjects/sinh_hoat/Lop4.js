@@ -12,7 +12,6 @@ class Lop4 extends React.Component {
             page: "Classrooms/Lop4",
             width: "0",
             height: "0",
-            pageNumber: 1,
             selectValue: ""
         }
         this.onClick = this.getReceipt.bind(this);
@@ -49,6 +48,10 @@ class Lop4 extends React.Component {
                 win.focus();
             }
         }
+    }
+
+    getVideo(event) {
+        this.setState({selectValue: event.target.value});
     }
 
     render() {
