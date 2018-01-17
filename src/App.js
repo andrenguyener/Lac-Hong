@@ -30,32 +30,31 @@ class App extends Component {
         <Router basename={process.env.PUBLIC_URL}>
             <div className="off-canvas-wrapper">
                 <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <Switch location={window.location}>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/history" component={Historys} />
-                    <Route path="/leaders" component={Leaders} />
-                    <Route path="/policy" component={Policy} />
-                    <Route path="/events" component={Events} />
-                    <Route path="/general" component={General} />
-                    <Route path="/lop1" component={Lop1} />
-                    <Route path="/lop2" component={Lop2} />
-                    <Route path="/lop3" component={Lop3} />
-                    <Route path="/lop4" component={Lop4} />
-                    <Route path="/lop5" component={Lop5} />
-                    <Route path="/lop6" component={Lop6} />
-                    <Route path="/lopk" component={Lopk} />
-                    <Route path="/childrensmusic" component={ChildrensMusic} />
-                    <Route path="/pictures" component={Pictures} />
-                    <Route path="/resources" component={Resources} />
-                    <Route path="/stories" component={Stories} />
-                    <Route path="/videos" component={Videos} />
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/links" component={Links} />
+                    <Switch location={window.location}>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/history" component={Historys} />
+                        <Route path="/leaders" component={Leaders} />
+                        <Route path="/policy" component={Policy} />
+                        <Route path="/events" component={Events} />
+                        <Route path="/general" component={General} />
+                        <Route path="/lop1" component={Lop1} />
+                        <Route path="/lop2" component={Lop2} />
+                        <Route path="/lop3" component={Lop3} />
+                        <Route path="/lop4" component={Lop4} />
+                        <Route path="/lop5" component={Lop5} />
+                        <Route path="/lop6" component={Lop6} />
+                        <Route path="/lopk" component={Lopk} />
+                        <Route path="/childrensmusic" component={ChildrensMusic} />
+                        <Route path="/pictures" component={Pictures} />
+                        <Route path="/resources" component={Resources} />
+                        <Route path="/stories" component={Stories} />
+                        <Route path="/videos" component={Videos} />
+                        <Route path="/contact" component={Contact} />
+                        <Route path="/links" component={Links} />
                     </Switch>
                 </div>
             </div>
         </Router>
-        
     );
   }
 }
