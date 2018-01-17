@@ -16,10 +16,22 @@ class About extends React.Component {
                         <img  src="img/orbit/image2.jpg" alt="Carousel"/>
                     </div>
                     <div>
+                        <img  src="img/orbit/image3.jpg" alt="Carousel"/>
+                    </div>
+                    <div>
                         <img  src="img/orbit/image4.jpg" alt="Carousel"/>
                     </div>
                     <div>
                         <img  src="img/orbit/image6.jpg" alt="Carousel"/>
+                    </div>
+                    <div>
+                        <img  src="img/orbit/image7.jpg" alt="Carousel"/>
+                    </div>
+                    <div>
+                        <img  src="img/orbit/image8.jpg" alt="Carousel"/>
+                    </div>
+                    <div>
+                        <img  src="img/orbit/image9.jpg" alt="Carousel"/>
                     </div>
                 </Carousel>
                 <div className="small-12 columns" id="about-paragraph">

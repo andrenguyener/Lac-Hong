@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-import Schedule from './../../contents/Schedule_Niên học 2016-2017.pdf';
+import Schedule from './../../contents/Niên học 2017-2018.pdf';
 
 class Historys extends React.Component {
 
