@@ -1,13 +1,11 @@
 
 import React from 'react';
-
+import Schedule from './../contents/Schedule_Niên học 2016-2017.pdf';
 
 class Information extends React.Component {
 
-
     render() {
         return (
-
             <main>
                 <div className="grid-x grid-margin-x grid-margin-y" id="information">
                     <div className="cell small-12 medium-6 large-4" id="announcements-information">
@@ -17,7 +15,7 @@ class Information extends React.Component {
                     </div>
                     <div className="cell small-12 medium-6 large-4" id="school-information">
                         <h4>School Information</h4>
-                        <p><a href="?id=4">Lịch trình học 2016-2017</a></p>
+                        <p><a href={Schedule} target="_blank">Lịch trình học 2016-2017</a></p>
                         <p>Địa điểm học (xin đừng gởi thư từ về địa chỉ này) Mở cửa từ ngày 11 tháng 9 năm 2016 đến ngày 4 tháng 6 năm 2017 vào mỗi Chủ Nhật từ 1:30pm-4:00pm</p>
                         <p>Voyager Middle School<br />
                         1171 4th Ave W<br />

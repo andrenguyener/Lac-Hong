@@ -2,25 +2,9 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// import $ from 'jquery';
-// require('foundation-sites');
-
-
-
+import Schedule from './../../contents/Schedule_Niên học 2016-2017.pdf';
 
 class Historys extends React.Component {
-
-    componentDidMount() {
-        // $(document).foundation();
-        // $(".off-canvas-submenu").hide();
-        // $(".off-canvas-submenu-call").click(function() {
-        //     var icon = $(this).parent().next(".off-canvas-submenu").is(':visible') ? '+' : '-';
-        //     $(this).parent().next(".off-canvas-submenu").slideToggle('fast');
-        //     $(this).find("span").text(icon);
-        // });
-
-        // $("[data-menu-underline-from-center] a").addClass("underline-from-center");
-    }
 
     render() {
         return (
@@ -65,7 +49,7 @@ class Historys extends React.Component {
                     <p>
                         Trường Việt Ngữ Lạc Hồng mở cửa từ mỗi Chủ Nhật lúc 1:30pm – 4:00pm tại
                         Trường Voyager Middle School 1171 4th Ave W Everett, WA 98204. Nếu quý vị muốn
-                        biết thêm chi tiết thời khóa biểu của trường, xin xem phần <a href='schedule.aspx'>sinh hoạt - chương trình</a>.
+                        biết thêm chi tiết thời khóa biểu của trường, xin xem phần <a href={Schedule} target="_blank">sinh hoạt - chương trình</a>.
                     </p>
                     <p>
                         In 2004, Lac Hong Vietnamese Language School started from one teacher and 15 students gathered every Sunday at the local library to learn how to spell and read Vietnamese. 

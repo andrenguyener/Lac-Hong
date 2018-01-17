@@ -29,7 +29,6 @@ header
     .overline
         a    
             text-decoration-color: $yellow
-            //text-decoration-color: linear-gradient(to right, transparent, $yellow, transparent)
         &:hover
             text-decoration: overline
     .selected
@@ -37,33 +36,25 @@ header
 
     .has-submenu
         &:hover .submenu
-            //transform: translateY(0%)
-            //transition-delay: 0s 0s 0.3s
-            //visibility: visible
-            //opacity: 1
-            //transition: all 1s
-            //visibility: visible
             opacity: 1
-            //z-index: 1
             transform: translateY(0%)
             transition-delay: 0s
             transition-duration: .3s
             transition-property: all ease-in-out
 
     .submenu
-          //transition: all 0.3s ease-in-out
-          //visibility: hidden
           opacity: 0
           transform: translateY(-1em)
           transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s
 
     +breakpoint(medium)
-        // font-size: rem-calc(11)
         padding-top: 50px
     +breakpoint(large)
         font-size: 100%
         padding-top: $global-padding
+
 /* Small Navigation */
+
 .nav-header
     padding-bottom: rem-calc(100)
 
@@ -71,14 +62,13 @@ header
     .nav-header
         padding-bottom: 0 !important
 
-
 .logo-small 
   float: right
 
      
   /* Medium-Up Navigation */
+
 @media only screen and (min-width: 40rem)
-  
 
   // Right part
   .top-bar-right 
@@ -151,10 +141,6 @@ header
 .top-bar-left 
     li.has-submenu:last-child
         margin-right: 0px !important
-      
-    
-  
-
 
 header
     #nav-menu
@@ -198,7 +184,6 @@ header
 /* General sidebar styles */
 .bm-menu 
     background: $dark-green
-    // padding: 2.5em 1.5em 0
     font-size: 1.15em
     padding-top: 3em
 
@@ -206,10 +191,8 @@ header
 /* Wrapper for item list */
 .bm-item-list 
     color: #fefefe
-    // padding: 0.3em
     > a, .Collapsible 
         color: #fefefe
-        // margin-left: 10px
         padding-left: 10px
         padding-top: 10px
         padding-bottom: 10px

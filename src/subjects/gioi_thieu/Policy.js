@@ -1,11 +1,7 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// import $ from 'jquery';
-// require('foundation-sites');
-
-
-
+import PdfFile from './../../contents/Trường Việt Ngữ Lạc Hồng-Nội Quy 2015-2016.pdf';
 
 class Policy extends React.Component {
 
@@ -14,8 +10,8 @@ class Policy extends React.Component {
             <div> 
                 <Navbar></Navbar>
                 <div className="page">
-                    <a className="hide-for-med-large" href="/contents/Trường Việt Ngữ Lạc Hồng-Nội Quy 2015-2016.pdf" target="_blank">Trường Việt Ngữ Lạc Hồng-Nội Quy 2015-2016</a>
-                    <embed src="/contents/Trường Việt Ngữ Lạc Hồng-Nội Quy 2015-2016.pdf" type='application/pdf' className="page_pdf show-for-med-large"/>
+                    <a className="hide-for-med-large" href={PdfFile} target="_blank">Trường Việt Ngữ Lạc Hồng-Nội Quy 2015-2016</a>
+                    <embed src={PdfFile} type='application/pdf' className="page_pdf show-for-med-large"/>
                 </div>
                 <Footer></Footer>
             </div>

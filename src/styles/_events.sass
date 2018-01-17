@@ -3,30 +3,19 @@
         max-width: rem-calc(1200)
     +breakpoint(xxlarge)
         max-width: rem-calc(1600)
-    tbody
-        td
-            //padding-top: 10px
 
 .event_menu
     width: 100%
     +breakpoint(large)
         width: 25%
         align: left
-        // .event_menu
-        //     .Main_Panel1
-        //         max-height: 500px
-        //         +breakpoint(medium)
-        //             max-height: 1000px
 
 .event_frame
-    // width: 100%
-    // height: 1000px
     padding-top: 10px
     display: none
     +breakpoint(large)
         display: initial
         width: 75%
-        // valign: top
 
     #Truyen1
         width: 100%
@@ -35,13 +24,10 @@
         +breakpoint(xxlarge)
             height: 1000px
             width: 100%
-
-#carouselFrame
-    // display: block
-    // border-top: 0
-
-.Main_Panel1
+            
+.Main_Panel
     max-height: 500px
+    overflow: auto
     +breakpoint(large)
         max-height: 800px
     +breakpoint(xlarge)

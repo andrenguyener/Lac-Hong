@@ -1,14 +1,7 @@
 @charset 'utf-8';
-//@import 'foundation-sites/scss/util/util';
 @import 'settings';
-// @import 'foundation-sites/scss/settings/settings';
 @import 'foundation-sites/scss/foundation.scss';
-// @import 'foundation-sites/dist/css/foundation.min.css';
-// @import 'foundation-sites/dist/css/foundation.min.css';
-//@import 'foundation-sites';
-//@import 'foundation-sites/scss/foundation';
-//@import 'foundation/motion-ui';
-//@import '../bower_components/motion-ui/src/motion-ui';
+
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -85,20 +78,4 @@
 @import 'events';
 @import 'videos';
 @import 'footer';
-
-// @import '2-basics/body-element';
-// @import '3-modules/header';
-// @import '3-modules/navbar';
-// @import '3-modules/about';
-// @import '3-modules/footer';
-// @import '3-modules/information';
-// @import '3-modules/mission';
-// @import '3-modules/logo';
-// @import '3-modules/page_text';
-// @import '4-pages/leaders';
-// @import '4-pages/policy';
-// @import '4-pages/events';
-// @import '4-pages/general';
-// @import '4-pages/lop1_pdf';
-// @import '4-pages/resources';
-// @import '4-pages/contact';
+@import './../font-awesome/scss/font-awesome.scss';

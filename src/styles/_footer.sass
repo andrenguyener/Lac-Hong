@@ -1,31 +1,21 @@
-footer 
+footer
     background-color: $dark-green
     text-align: left
     padding-top: 2rem
-    //padding-bottom: 1rem
     position: absolute
     width: 100%
     left: 0px
-    bottom: 0px  
+    bottom: 0px
     right: 0px
-    // height: auto
     display: block
     font-size: 15px
     .cell
-      margin-bottom: rem-calc(10)
+        margin-bottom: rem-calc(10)
     .footer
         max-width: rem-calc(1280)
         margin: 0 auto
-    +breakpoint(medium)
-        //height: 120px  
     +breakpoint(large)
         text-align: center
-
-
-
-
-
- 
 
 #footer_address, #footer_contact
   +breakpoint(large)
@@ -33,33 +23,30 @@ footer
     border-width: 2px
     border-right-style: solid
 
-
 #facebook-icon
-  font-size: 50px
-  color: $light-green
-  &:hover
-    color: $darker-green
+    font-size: 50px
+    color: $light-green
+    &:hover
+        color: $darker-green
 
 #copyright-container
-  color: $darker-green
-  text-align: center
-  font-size: 12px
-  padding-bottom: .25rem
-  p
-    margin-bottom: 0
-
-
-
+    color: $darker-green
+    text-align: center
+    font-size: 12px
+    padding-bottom: .25rem
+    p
+        margin-bottom: 0
 
 #address-container, #contact-container, #facebook-container
-  text-align: center
-  padding-bottom: 1rem
+    ext-align: center
+    padding-bottom: 1rem
+    p
+        text-align: left
 
 .fa-phone, .fa-envelope
-  margin-right: 5px
-  color: $light-green
-
+    margin-right: 5px
+    color: $light-green
 
 .fa-phone, .fa-envelope
-  &:hover
-    color: $darker-green
+    &:hover
+        color: $darker-green

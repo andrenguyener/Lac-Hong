@@ -2,41 +2,12 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-class About extends React.Component {
 
+class About extends React.Component {
 
     render() {
         return (    
             <div className="about row">
-                {/* <div aria-label="Favorite Space Pictures" className="orbit hide-for-small-only" data-orbit="" role="region">
-                    <div className="orbit-wrapper">
-                        <div className="orbit-controls">
-                            <button className="orbit-previous"><span className="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button> <button className="orbit-next"><span className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-                        </div>
-                        <ul className="orbit-container">
-                            <li className="is-active orbit-slide">
-                                <figure className="orbit-figure">
-                                    <img alt="Space" className="orbit-image" src="img/orbit/image1.jpg"/>
-                                </figure> 
-                            </li>
-                            <li className="orbit-slide">
-                                <figure className="orbit-figure">
-                                    <img alt="Space" className="orbit-image" src="img/orbit/image2.jpg"/>
-                                </figure>
-                            </li>
-                            <li className="orbit-slide">
-                                <figure className="orbit-figure">
-                                    <img alt="Space" className="orbit-image" src="img/orbit/image4.jpg"/> 
-                                </figure>
-                            </li>
-                            <li className="orbit-slide">
-                                <figure className="orbit-figure">
-                                    <img alt="Space" className="orbit-image" src="img/orbit/image6.jpg"/>
-                                </figure>
-                            </li>
-                        </ul>
-                    </div>
-                </div> */}
                 <Carousel className="pictureCarousel" showThumbs={false} dynamicHeight infiniteLoop autoPlay showStatus={false}>
                     <div>
                         <img  src="img/orbit/image1.jpg" alt="Carousel"/>

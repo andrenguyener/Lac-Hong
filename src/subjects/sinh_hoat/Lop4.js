@@ -1,16 +1,8 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// const context = require.context("./../../contents/Classrooms/Lop4", true, /\.html$/);
-// const context = require('./../../contents/Classrooms/Lop4/Lop4.html');
 const context = require.context('./../../contents/Classrooms/Lop4', true, /\.(pdf)?$/);
-let pdfObj = {};
-// const context = require.context('./../../contents/Classrooms/Lop4', true, /.*/);
-// import $ from 'jquery';
-// require('foundation-sites');
-
-
-
+var pdfObj = {};
 
 class Lop4 extends React.Component {
 
@@ -20,22 +12,23 @@ class Lop4 extends React.Component {
             page: "Classrooms/Lop4",
             width: "0",
             height: "0",
+            pageNumber: 1,
             selectValue: ""
         }
         this.onClick = this.getReceipt.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
-    componentDidMount() {
-        // $(document).foundation();
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
+    componentWillMount() {
         context.keys().forEach(function (key) {
             pdfObj[key] = context(key);
         });
         this.setState({selectValue: pdfObj["./Lop4.pdf"]});
-        console.log(this.state.selectValue);
-        console.log(pdfObj);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
     }
 
     componentWillUnmount() {
@@ -56,7 +49,6 @@ class Lop4 extends React.Component {
                 win.focus();
             }
         }
-        console.log(this.state.selectValue);
     }
 
     render() {
@@ -68,7 +60,7 @@ class Lop4 extends React.Component {
                         <tbody>
                             <tr>
                                 <td className="event_menu">
-                                    <div className="Main_Panel1" style={{overflow: "auto"}}>
+                                    <div className="Main_Panel">
                                         <ul>
                                             <li>
                                                 <span title='./Lop4.pdf' onClick={this.onClick}>Lop 4</span>
@@ -146,8 +138,8 @@ class Lop4 extends React.Component {
                                     </div>
                                 </td>
                                 <td className="event_frame show-for-large">
-                                    <div className="responsive-embed">
-                                        <iframe frameBorder="0" title="PDF Viewer" className="Truyen" ref={(iframe) => { this.mediaFrame = iframe;}} src={this.state.selectValue} ></iframe>
+                                    <div className="responsive-embed">                                        
+                                        <object frameBorder="0" title="PDF Viewer" type="application/pdf" className="Truyen" ref={(object) => { this.mediaFrame = object;}} data={this.state.selectValue} ><embed src={this.state.selectValue} type="application/pdf" /></object>
                                     </div>
                                 </td>
                             </tr>

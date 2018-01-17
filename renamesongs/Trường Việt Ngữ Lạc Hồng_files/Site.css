@@ -1,0 +1,665 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: url('../Images/bg65.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    mmbackground-image: url('../Images/background1.jpg');
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    xxcolor: #696969;
+    vertical-align: 150%;
+    background-color: #E8FFFF;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+
+h2
+{
+    font-size: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: #FF0000;
+    font-weight: bold;
+    font-family: Arial;
+    line-height: 60px;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
+.title
+{
+    background-image: url('../Images/banner3.jpg');
+    display: block;
+    float: left;
+    margin: 0px;
+    color: #000000;
+    height: 105px;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: Algerian;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    xtext-indent: 125px;
+}
+.main
+{
+    padding: 0px 0px;
+    margin: 0px 0px 0px 0px;
+    min-height: 510px;
+    line-height: normal;
+    background: url('../Images/bg70.gif') no-repeat center center fixed; 
+	
+}
+
+.alertContent
+{
+    border: 1px outset #0000FF;
+    xbackground: url('../Images/tatnuoc.jpg') no-repeat center center fixed;
+    x-webkit-background-size: cover;
+    x-moz-background-size: cover;
+    x-o-background-size: cover;
+    xbackground-size: cover;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    font-weight: bold;
+    background-color: Yellow;
+}
+
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+{
+    margin-top: 0in;
+    margin-right: 0in;
+    margin-bottom: 10.0pt;
+    margin-left: 0in;
+    line-height: 115%;
+    font-size: 14.0pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+	
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 200px;
+    min-height: 200px;
+
+}
+
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    border-style: outset;
+    border-width: 1px;
+    background-color: #8CC68B;
+    width: 100%;
+    text-align: center;
+}
+
+div.menu
+{
+    xxpadding: 4px 0px 4px 8px;
+}
+/*
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:visited
+{
+    background-color: #CCFF99;
+    border: 1px #4e667d solid;
+    color: #000000;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+*/
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+				
+.menuHeader
+{
+	text-align: left;
+		   
+}
+
+.NewsRow
+{
+	border-right: 0px;
+	border-top: gray solid 0px;
+	font: 12px verdana,arial,helvetica, "sans-serif";
+	border-left: gray solid 0px;
+	color: gray;
+	background-color: #F4F4F4;
+	font-weight: bold;
+	border-style: none none none none;
+	border-width: thin;
+}
+.accordion
+{
+	width: 900px;
+}
+.accordionHeader
+{
+	border: 1px solid #2F4F4F;
+	color: black;
+	background-color: #C2D3FC;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.accordionHeaderSelected
+{
+	border: 1px solid #2F4F4F;
+	color: black;
+	background-color: #E7EEFE;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+.accordionContent
+{
+	background-color: white;
+	border: 1px dashed #2F4F4F;
+	border-top: none;
+	padding: 5px;
+	padding-top: 10px;
+}
+.intro
+{
+	border-right: 1px;
+	border-top: #C2D5FC solid 1px;
+	font: 12px verdana,arial,helvetica, "sans-serif";
+	border-left: #C2D5FC solid 1px;
+	color: black;
+	background-color: #C2D5FC;
+	font-weight: bold;
+	border-style: solid outset ridge ridge;
+	border-width: thin;
+	padding: 5px;
+	margin-top: 5px; 
+	padding-top: 10px;           
+}
+.tvLinkHeader
+{
+	border: 1px solid #2F4F4F;
+	color: black;
+	background-color: #8CC68B;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	margin-top: 5px;            
+}
+.tvLinkContent
+{
+	text-align: left;
+	background-color: white;
+	border: 1px dashed #2F4F4F;
+	border-top: none;
+	padding: 5px;
+	padding-top: 10px;
+}
+.footer
+{
+    font-family: Arial, Sans-Serif;
+    font-size: 10px;
+    xxxbackground-color: #CCCCFF;
+    border-top: outset 1px gray;
+    padding: 5px;
+    xxheight: px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    background-color: #8CC68B;
+    border-style: ridge;
+}
+
+.audio
+{
+    text-decoration: none;
+    
+}
+.audioformat
+{
+    text-decoration: none;
+    background-color: #8CC68B;
+}
+.audioformat caption{
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:12px;
+	line-height:15px;
+	color:#333;
+	text-transform: capitalize;
+	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 2px;
+	text-align: left;
+	background-color: #E2E2E2;
+}
+.audioformat th {
+	background-color: #ECE7B2;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size:14px;
+	line-height:15px;
+}
+.audioformat img {
+	vertical-align: baseline;
+	margin: 0px;
+	padding: 0px;
+}
+.audioformat td {
+	background-color: #FFFFFF;
+	text-align: left;	
+	padding: 3px;
+}
+.audioformat th#left{
+	text-align: left;	
+}
+.audioformat th#right{
+	text-align: right;
+	font-size: 12px;
+	color: #000;
+}
+
+.audioformat td#left{
+	background-color: #F4F2D7;
+	text-align: left;
+}
+.audioformat td#right{
+	background-color: #ECE7B2;
+	text-align: right;
+}
+.audioformat td#left1{
+	text-align: left;	
+}
+.audioformat td#right1{
+	text-align: right;	
+}
+.audioformat td#left2{
+	background-color: #E9E9E9;
+	text-align: left;
+	font-size: 12px;
+	color: #000;
+}
+.audioformat td#left3{
+	background-color: #F4F2D7;
+	text-align: left;
+	font-weight: bold;
+}
+.audioformat td#right2{
+	background-color: #F4F4F4;
+	text-align: right;	
+}
+.audioformat td#center{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+}
+.audioformat td#center1{
+	text-align: center;
+}
+
+.feedback {
+	padding: 10px;
+	border: 1px outset #2F4F4F;
+	
+}
+
+#ddsocial {position: absolute; margin-left: -138px; margin-top: 0px;}
+
+#ddsocial.floating {position: fixed; top: 0;}
+
+.donatedd {
+text-align:right;
+color:#666;
+width:138px;
+font-size:9px;
+font-family:georgia, 'time new romans', serif;
+margin:0 auto;
+padding:0;
+}
+
+.donatedd p {
+color:#cccccc;
+line-height:22px;
+padding: 0 0 10px 0;
+margin: 20px 0 20px 0;
+}
+
+.donatedd img {
+border:none;
+}
+
+#donatepp {
+clear: both;
+margin: 0;
+padding: 0;
+}
+
+#donatepp a{
+float: right;
+background: #9FC54E;
+border: 1px solid #9FC54E;
+-moz-border-radius-topright: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-bottomleft: 10px;
+-webkit-border-bottom-left-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+letter-spacing:-1px;
+font-family: verdana, helvetica, arial, sans-serif;
+color:#fff;
+padding: 10px;
+font-weight: 700;
+}
+
+#donatepp a:hover{
+float: right;
+background: #1777b1;
+border: 1px solid #cccccc;
+-moz-border-radius-topright: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-bottomleft: 10px;
+-webkit-border-bottom-left-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+letter-spacing:-1px;
+font-family: verdana, helvetica, arial, sans-serif;
+color:#fff;
+padding: 10px;
+font-weight: 700;
+}
+
+.hiddenDiv
+{
+    visibility: hidden;
+    width:0px;
+    height:0px;
+    top:0px;
+    left: 0px;
+    display: none;
+    z-index: null;
+}
+ 
+.modalContainer 
+{
+    top: 0%;
+    left: 0%;
+    width: 0;
+    height: 0;
+    background: #f3f3f3;
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    filter: alpha(opacity=60);
+    visibility: visible;
+    cursor:none;
+    position: absolute;
+    display:block;
+}
+
+.modalWindow 
+{
+	border-style: solid dotted;
+	border-color: #aaaaaa;
+	border-width: 8px 1px;
+	margin: 0.25em;
+	padding: 10px;
+	float: center;
+	position: absolute;
+	left:50%;
+	top:50%;
+	text-align: left;
+	top: 0px;
+	width: 71.9%;
+	overflow: hidden;
+	background-color: #ffffff; 
+	cursor:default;
+	opacity: 1.0;
+	-moz-opacity: 1.0;
+	filter: alpha(opacity=100);
+	visibility: hidden;
+	z-index:100;
+ }
+
+.homeContent1
+{
+    border: 1px solid #C0C0C0;
+    font: 14px arial, verdana, sans-serif;
+    font-weight: bold;
+    color: #FF0000;
+    background-color: #F0F0F0;
+}
+.homeContent2
+{
+    padding: 3px;
+    font: 14px arial, verdana, sans-serif;
+    color: #000000;
+    
+}

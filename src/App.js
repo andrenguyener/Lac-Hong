@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import Home from './Home';
 import Historys from './subjects/gioi_thieu/History';
@@ -22,55 +22,40 @@ import Videos from './subjects/thu_vien/Videos';
 import Contact from './subjects/lien_lac/Contact';
 import Links from './subjects/lien_ket/Links';
 import './styles/app.css';
-// import 'foundation-sites/dist/js/foundation.min.js';
-// import './js/app.js';
-//import jQuery from './js/jquery.js';
-// import jQuery from 'jquery';
-// require('foundation-sites');
 
 class App extends Component {
 
-  // componentDidMount() {
-  //   jQuery(document).foundation();
-  // }
-
-
   render() {
     return (
-
-      <div className="App">
-        <HashRouter>
+        <Router basename={process.env.PUBLIC_URL}>
             <div className="off-canvas-wrapper">
-              <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
-                <Route exact path="/" component={Home} />
-                <Route path="/history" component={Historys} />
-                <Route path="/leaders" component={Leaders} />
-                <Route path="/policy" component={Policy} />
-                <Route path="/events" component={Events} />
-                <Route path="/general" component={General} />
-                <Route path="/lop1" component={Lop1} />
-                <Route path="/lop2" component={Lop2} />
-                <Route path="/lop3" component={Lop3} />
-                <Route path="/lop4" component={Lop4} />
-                <Route path="/lop5" component={Lop5} />
-                <Route path="/lop6" component={Lop6} />
-                <Route path="/lopk" component={Lopk} />
-                <Route path="/childrensmusic" component={ChildrensMusic} />
-                <Route path="/pictures" component={Pictures} />
-                <Route path="/resources" component={Resources} />
-                <Route path="/stories" component={Stories} />
-                <Route path="/videos" component={Videos} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/links" component={Links} />
-                {/* <Route path="/signin" component={SignIn} />
-                <Route path="/signup" component={SignUp} />
-                <Route path="/home" component={Home} />
-                <Route path="/draw" component={Draw} /> */}
-              </div>
+                <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <Switch location={window.location}>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/history" component={Historys} />
+                    <Route path="/leaders" component={Leaders} />
+                    <Route path="/policy" component={Policy} />
+                    <Route path="/events" component={Events} />
+                    <Route path="/general" component={General} />
+                    <Route path="/lop1" component={Lop1} />
+                    <Route path="/lop2" component={Lop2} />
+                    <Route path="/lop3" component={Lop3} />
+                    <Route path="/lop4" component={Lop4} />
+                    <Route path="/lop5" component={Lop5} />
+                    <Route path="/lop6" component={Lop6} />
+                    <Route path="/lopk" component={Lopk} />
+                    <Route path="/childrensmusic" component={ChildrensMusic} />
+                    <Route path="/pictures" component={Pictures} />
+                    <Route path="/resources" component={Resources} />
+                    <Route path="/stories" component={Stories} />
+                    <Route path="/videos" component={Videos} />
+                    <Route path="/contact" component={Contact} />
+                    <Route path="/links" component={Links} />
+                    </Switch>
+                </div>
             </div>
-        </HashRouter>
-      </div>
-
+        </Router>
+        
     );
   }
 }

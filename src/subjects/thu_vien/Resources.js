@@ -1,8 +1,6 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// import $ from 'jquery';
-// require('foundation-sites');
 const context = require.context('./../../contents/Resources', true, /\.(pdf|docx|doc)?$/);
 var pdfObj = {};
 
@@ -22,14 +20,16 @@ class Resources extends React.Component {
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
-    componentDidMount() {
-        // $(document).foundation();
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
+    componentWillMount() {
         context.keys().forEach(function (key) {
             pdfObj[key] = context(key);
         });
         this.setState({selectValue: pdfObj["./A_Sách giáo khoa cấp 01.pdf"]});
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
     }
 
     componentWillUnmount() {
@@ -61,7 +61,7 @@ class Resources extends React.Component {
                         <tbody>
                             <tr>
                                 <td className="event_menu">
-                                    <div className="Main_Panel1" style={{overflow: "auto"}}>
+                                    <div className="Main_Panel">
                                         <ul>
                                             <li>
                                                 <span title='./A_Sách giáo khoa cấp 01.pdf' onClick={this.onClick}>A_Sách giáo khoa cấp 01</span>
@@ -203,7 +203,7 @@ class Resources extends React.Component {
                                 </td>
                                 <td className="event_frame show-for-large">
                                     <div className="responsive-embed">
-                                        <iframe frameBorder="0" title="PDF Viewer" className="Truyen" ref={(iframe) => { this.mediaFrame = iframe;}} src={this.state.selectValue} ></iframe>
+                                        <object frameBorder="0" title="PDF Viewer" type="application/pdf" className="Truyen" ref={(object) => { this.mediaFrame = object;}} data={this.state.selectValue} ><embed src={this.state.selectValue} type="application/pdf" /></object>
                                     </div>
                                 </td>
                             </tr>

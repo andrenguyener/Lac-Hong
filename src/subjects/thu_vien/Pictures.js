@@ -1,25 +1,13 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// import Orbit from './../../components/orbit';
-// import $ from 'jquery';
-// import Foundation from 'foundation-sites';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import Motion from 'motion-ui';
-// import 'foundation-sites/dist/js/foundation.js';
-//import './../../contents/Photos/2016Tet/';
 const _2016Tet = require.context('./../../contents/Photos/2016Tet', true)
 const _2015TetSeattleCenter = require.context('./../../contents/Photos/2015TetSeattleCenter', true)
 const _2015Tet = require.context('./../../contents/Photos/2015Tet', true)
 const _2014Christmas = require.context('./../../contents/Photos/2014Christmas', true)
 const _2010Tet = require.context('./../../contents/Photos/2010Tet', true)
-
-// require('foundation-sites');
-
-
-
 
 class Pictures extends React.Component {
 
@@ -38,12 +26,6 @@ class Pictures extends React.Component {
         let defaultImageArray = defaultKeys.map(key => _2016Tet(key));
         this.setState({data: defaultImageArray});
     }
-
-    componentDidMount() {
-        // $(document).foundation();
-        // $(document).ready();
-    }
-
 
     replaceAlbum(event) {
         
@@ -82,7 +64,6 @@ class Pictures extends React.Component {
             default:
                 break;
         }
-        console.log(this.state.data);
     }
 
     render() {
@@ -95,7 +76,7 @@ class Pictures extends React.Component {
                         <tbody>
                             <tr>
                                 <td className="event_menu">
-                                    <div className="Main_Panel1" style={{overflow: "auto"}}>
+                                    <div className="Main_Panel">
                                         <ol>
                                             <li>
                                                 <span title='2016Tet' onClick={this.onClick}>Tết Bính Thân 2016</span>

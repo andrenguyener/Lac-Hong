@@ -1,17 +1,8 @@
 import React from 'react';
 import Navbar from './../../components/navbar';
 import Footer from './../../components/footer';
-// import $ from 'jquery';
-// require('foundation-sites');
-
-
-
 
 class Contact extends React.Component {
-
-    componentDidMount() {
-        // $(document).foundation();
-    }
 
     render() {
         return (
@@ -42,12 +33,7 @@ class Contact extends React.Component {
                                 <br/> Email: <a href="mailto:phammot@gmail.com"> phammot@gmail.com</a></p>
                             </div>
                         </div>
-
-
-
-
                     <form id="myForm" method="post" data-abide>  
-                            
                             <h5>Contact Us</h5>
                             <label>Name</label>
                             <small className="error">Your full name is required.</small>
@@ -70,7 +56,6 @@ class Contact extends React.Component {
                 </div>
                 <Footer></Footer>
             </div>
-                
         );
     }
 }
