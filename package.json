@@ -2,6 +2,7 @@
   "name": "lac-hong",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://andrenguyener.github.io/Lac-Hong",
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "npm-run-all": "^4.0.2",
