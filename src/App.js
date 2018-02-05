@@ -21,6 +21,7 @@ import Stories from './subjects/thu_vien/Stories';
 import Videos from './subjects/thu_vien/Videos';
 import Contact from './subjects/lien_lac/Contact';
 import Links from './subjects/lien_ket/Links';
+import Admin from './subjects/Admin';
 import './styles/app.css';
 
 class App extends Component {
@@ -50,6 +51,7 @@ class App extends Component {
                     <Route path="/videos" component={Videos} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/links" component={Links} />
+                    <Route path="/admin" component={Admin} />
                 </div>
             </div>
         </Router>
